@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+
+     <title>Monopoly Grid</title>
+     <style>
+          body {
+               background-color: rgb(47, 50, 51);
+               color: white;
+          }
+
+          .H {
+               text-align: center;
+          }
+
+          .container {
+               justify-content: center;
+               display: grid;
+               grid-template-columns: 100px 100px 100px 100px 100px 100px 100px;
+               grid-template-rows: 100px 100px 100px 100px 100px 100px 100px;
+               row-gap: 3px;
+               column-gap: 3px;
+
+               border: 3px rgb(197, 28, 28);
+          }
+
+          .item {
+               border: 3px red;
+
+               width: 100px;
+               height: 100px;
+               background-color: rgb(59, 115, 115);
+               text-align: center;
+
+          }
+
+          #item-9 {
+               grid-area: 5/1/6/2;
+               ;
+          }
+
+          #item-10 {
+               grid-area: 6/1/7/2;
+          }
+
+          #item-11 {
+               grid-area: 7/1/8/2;
+
+          }
+
+          #item-12 {
+               grid-area: 4/7/5/8;
+          }
+
+          #item-13 {
+               grid-area: 5/7/6/8;
+          }
+
+          #item-16 {
+               grid-area: 6/7/7/8;
+          }
+
+          #item-17 {
+               grid-area: 7/7/8/8;
+          }
+
+          #item-18 {
+               grid-area: 7/2/8/3;
+          }
+
+          #item-19 {
+               grid-area: 7/3/8/4;
+          }
+
+          #item-20 {
+               grid-area: 7/4/8/5;
+          }
+
+          #item-23 {
+               grid-area: 7/5/8/6;
+          }
+
+          #item-24 {
+               grid-area: 7/6/8/7;
+          }
+
+          #item-14 {
+               grid-area: 3/1/4/2;
+          }
+
+          #item-15 {
+               grid-area: 4/1/5/2;
+          }
+
+          #item-21 {
+               grid-area: 2/7/3/8;
+          }
+
+          #item-22 {
+               grid-area: 3/7/4/8;
+          }
+
+          #item-25 {
+               grid-area: 2/2/7/7;
+          }
+
+          .sitem {}
+
+          /* .extra
+        {
+            text-align: center; 
+
+        } */
+     </style>
+     <script>
+          function allowDrop(ev) {
+               ev.preventDefault();
+          }
+
+          function drag(ev) {
+               ev.dataTransfer.setData("text", ev.target.id);
+          }
+
+          function drop(ev) {
+               ev.preventDefault();
+               var data = ev.dataTransfer.getData("text");
+               ev.target.appendChild(document.getElementById(data));
+          }
+     </script>
+</head>
+<!--
+  2.theme including poster
+  3.adding stufff in boxes and resizing boxes
+  4.hyperlinks
+  6.Moving pieces and Die
+  7.Hosting on server
+ -->
+
+<body>
+
+
+
+     <img id="drag1"
+          src="https://th.bing.com/th/id/R.5c2f1410a8c97a4cce2889fdfa7eecf6?rik=k0x8TiEY3a0ffw&riu=http%3a%2f%2fwww.customerparadigm.com%2fimages%2fseo%2fRed-Box.jpg&ehk=nqQvLBQrgraBmPySheRoEssT9n1O7%2fy2Xp8nRxEWJD0%3d&risl=&pid=ImgRaw&r=0&sres=1&sresct=1"
+          draggable="true" ondragstart="drag(event)" width="10" height="10">
+
+          <img id="drag1"
+          src="https://th.bing.com/th/id/OIP.7BCar0HxGvTthX_buK5wywHaHa?w=175&h=176&c=7&r=0&o=5&dpr=1.25&pid=1.7"
+          draggable="true" ondragstart="drag(event)" width="10" height="10">
+
+          <img id="drag1"
+          src="https://i.stack.imgur.com/FFqIZ.jpg"
+          draggable="true" ondragstart="drag(event)" width="10" height="10">
+
+          <img id="drag1"
+          src="https://th.bing.com/th/id/R.7364dc4fb92029e32e42b11205c2191f?rik=r6Ahvci%2fq%2fhkrA&riu=http%3a%2f%2fwww.solidbackgrounds.com%2fimages%2f1024x768%2f1024x768-black-solid-color-background.jpg&ehk=0WWojgaXXI1BWjz1VfPy2rhdM4HfXHkVJl5%2bX%2bXEGWA%3d&risl=&pid=ImgRaw&r=0"
+          draggable="true" ondragstart="drag(event)" width="10" height="10">
+
+          <img id="drag1"
+          src="https://th.bing.com/th/id/OIP._ESfFEK_rJrVT1fd60ZaFgHaEo?w=294&h=183&c=7&r=0&o=5&dpr=1.25&pid=1.7"
+          draggable="true" ondragstart="drag(event)" width="10" height="10">
+
+          <img id="drag1"
+          src="https://th.bing.com/th/id/OIP.fkPwX-QHD1gwHTagmFdl5QHaE7?w=246&h=180&c=7&r=0&o=5&dpr=1.25&pid=1.7"
+          draggable="true" ondragstart="drag(event)" width="10" height="10">
+
+          <img id="drag1"
+          src="https://th.bing.com/th/id/OIP.TKsCaOudWnDeSgznvbgxzQHaHa?w=168&h=180&c=7&r=0&o=5&dpr=1.25&pid=1.7"
+          draggable="true" ondragstart="drag(event)" width="10" height="10">
+
+
+          <img id="drag1"
+          src="https://cdn.wallpapersafari.com/53/79/U2QuxB.jpg"
+          draggable="true" ondragstart="drag(event)" width="10" height="10">
+
+          <img id="drag1"
+          src="https://th.bing.com/th/id/OIP.M4EQX2I9HocshRfYEerJ9gHaHa?w=155&h=180&c=7&r=0&o=5&dpr=1.25&pid=1.7"
+          draggable="true" ondragstart="drag(event)" width="10" height="10">
+
+          <img id="drag1"
+          src="https://th.bing.com/th/id/OIP.CC4dlOKFfxO0FHmQNaVBwwAAAA?w=248&h=180&c=7&r=0&o=5&dpr=1.25&pid=1.7"
+          draggable="true" ondragstart="drag(event)" width="10" height="10">
+
+
+
+     <div class="H">
+          <h1>Monopoly</h1> <br> <br> <br>
+     </div>
+
+
+     <div class="container">
+          <div class="item" id="item-1" ondrop="drop(event)" ondragover="allowDrop(event)"> <br>
+               <h3>Give Treat </h3>
+          </div>
+          <div class="item" id="item-2" ondrop="drop(event)" ondragover="allowDrop(event)"> </div>
+          <div class="item" id="item-3" ondrop="drop(event)" ondragover="allowDrop(event)"> </div>
+          <div class="item" id="item-4" ondrop="drop(event)" ondragover="allowDrop(event)">
+               <img src="https://images.fineartamerica.com/images/artworkimages/mediumlarge/2/monopoly-chance-card-dan-sproul.jpg"
+                    alt="" width="100 px" height="100 px">
+          </div>
+          <div class="item" id="item-5" ondrop="drop(event)" ondragover="allowDrop(event)"> </div>
+          <div class="item" id="item-6" ondrop="drop(event)" ondragover="allowDrop(event)"> </div>
+          <div class="item" id="item-7" ondrop="drop(event)" ondragover="allowDrop(event)"> <img
+                    src="https://i.pinimg.com/originals/fa/1e/21/fa1e21f7e058a0f1fbc68c17ef4031e1.jpg" alt=""
+                    width="100 px" height="100 px"> </div>
+          <div class="item" id="item-8" ondrop="drop(event)" ondragover="allowDrop(event)">
+          </div>
+          <div class="item" id="item-9" ondrop="drop(event)" ondragover="allowDrop(event)"> </div>
+          <div class="item" id="item-10" ondrop="drop(event)" ondragover="allowDrop(event)"> </div>
+          <div class="item" id="item-11" ondrop="drop(event)" ondragover="allowDrop(event)"> <br>
+               <h3> START </h3>
+          </div>
+          <div class="item" id="item-12" ondrop="drop(event)" ondragover="allowDrop(event)"> <br>
+               <h3>POWER UP</h3>
+          </div>
+          <div class="item" id="item-13" ondrop="drop(event)" ondragover="allowDrop(event)"> </div>
+          <div class="item" id="item-14" ondrop="drop(event)" ondragover="allowDrop(event)"> </div>
+          <div class="item" id="item-15" ondrop="drop(event)" ondragover="allowDrop(event)"> </div>
+          <div class="item" id="item-16" ondrop="drop(event)" ondragover="allowDrop(event)"> </div>
+          <div class="item" id="item-17" ondrop="drop(event)" ondragover="allowDrop(event)"> <br>
+               <h3>Get Treat </h3></div>
+          <div class="item" id="item-18" ondrop="drop(event)" ondragover="allowDrop(event)"> </div>
+          <div class="item" id="item-19" ondrop="drop(event)" ondragover="allowDrop(event)"> </div>
+          <div class="item" id="item-20" ondrop="drop(event)" ondragover="allowDrop(event)">
+               <img src="https://images.fineartamerica.com/images/artworkimages/mediumlarge/2/monopoly-chance-card-dan-sproul.jpg"
+                    alt="" width="100 px" height="100 px">
+          </div>
+          <div class="item" id="item-21" ondrop="drop(event)" ondragover="allowDrop(event)"> </div>
+          <div class="item" id="item-22" ondrop="drop(event)" ondragover="allowDrop(event)"> </div>
+          <div class="item" id="item-23" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+          <div class="item" id="item-24" ondrop="drop(event)" ondragover="allowDrop(event)"> </div>
+          <div class="sitem" id="item-25"> <img src="Qumanzi.jpeg" alt="" width="510 px" height="510 px"> </div>
+     </div>
+</body>
+
+</html>
